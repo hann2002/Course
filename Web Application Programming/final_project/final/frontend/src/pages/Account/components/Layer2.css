@@ -1,0 +1,28 @@
+.button-group {
+    display: flex;
+    overflow: hidden;
+    margin-left: 25%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.button{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 50%;  /* 設定按鈕的寬度 */
+    height: 50px;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: antiquewhite;
+}
+
+.button.selected {
+    background-color: #007bff;
+    color: white;
+}

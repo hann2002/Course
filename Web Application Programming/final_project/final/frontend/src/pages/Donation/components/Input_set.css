@@ -1,0 +1,11 @@
+
+.input-container {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.Input_set{
+  margin: 2px;
+}

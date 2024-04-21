@@ -1,0 +1,21 @@
+.radio-group {
+  display: flex;
+  align-items: left;
+  margin-left: -10%;
+  margin-bottom: 8px;
+  width: 400px;
+}
+.radio-group label {
+  flex: 45;
+}
+input[type='radio'] {
+  width: auto;
+  height: auto;
+  border-radius: 0%; 
+  background-color: white;
+  border: 4px solid white;
+  transition: 0.1s;
+}
+input[type='radio']:checked {
+  background-color: #4c8bf5; /* 更改選中時的背景顏色 */
+}

@@ -1,0 +1,39 @@
+.navbar-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    height: 50%;
+    padding-top: 0.7em;
+}
+
+.navbar-container>div{
+    font-size:1.2em;
+    /* font-family: Helvetica; */
+    font-family: sans-serif;
+}
+
+.navbar-active{
+    font-weight: bold;
+    color:#366476;
+    transition: all 0.2s;
+}
+
+.navbar-active:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transform:scale(1.1);
+}
+
+.navbar{
+    font-weight: bold;
+    /* bold是我加的 */
+    opacity:0.8;
+    transition: all 0.2s;
+}
+
+.navbar:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transform:scale(1.1);
+}

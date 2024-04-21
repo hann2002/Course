@@ -1,0 +1,12 @@
+.layer1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .layer1 h1{
+    font-size: 32px;
+  }
+
+  

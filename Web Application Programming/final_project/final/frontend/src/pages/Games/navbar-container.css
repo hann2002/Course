@@ -1,0 +1,45 @@
+.navbar2-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    height: 50%;
+    padding-top: 0.7em;
+}
+
+.navbar2-container>div{
+    font-size:1.2em;
+    font-family: Helvetica;
+}
+
+.navbar2-active{
+    font-weight: bold;
+    color:#366476;
+    transition: all 0.2s;
+}
+
+.navbar2-active:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transform:scale(1.1);
+}
+
+.navbar2{
+    opacity:0.8;
+    transition: all 0.2s;
+}
+
+.navbar2:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transform:scale(1.1);
+}
+
+.navbar2 a{
+    
+    color:inherit; 
+        /* font-size: 16px; */
+    text-decoration: none;
+        /* padding: 0px; */
+    
+}

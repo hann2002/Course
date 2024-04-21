@@ -1,0 +1,2 @@
+# HW4 - Database
+Use React + SQL to create a website that enables users to join games with others and view their rankings, scores, and differences compared to other users for specific games and overall.

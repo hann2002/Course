@@ -1,0 +1,2 @@
+# HW11 Adaptation - Domain Adaptation
+Given real **images** (with labels) and **drawing images** (without labels), use domain adaptation technique to make your network predict the drawing images correctly.

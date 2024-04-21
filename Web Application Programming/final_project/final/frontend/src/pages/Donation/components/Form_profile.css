@@ -1,0 +1,50 @@
+.Form_profile{
+  width: 90%;
+  display: flex;
+  height: 600px;
+  align-items: center;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.Form_profile h3{
+  margin: 15px;
+  text-align: center; /* 居中文本 */
+
+}
+.Form_profile label {
+  font-weight: bold;
+}
+
+.Form_profile input {
+  border: none;
+  width: 100%;
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+  
+}
+
+.Form_profile img{
+  width: 15px;
+  height: 15px;
+}
+
+.input-group {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -5%;
+  margin-left: 0px;
+}
+
+
+
+.sponsor-container button{
+  margin-left: 35%; 
+  margin-bottom: 20px;
+  width: 30%;
+  height: 50px;
+}

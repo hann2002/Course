@@ -1,0 +1,65 @@
+/* Game container */
+#game-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#game-container h2 {
+    margin-top: 0;
+    font-size: 30px;
+}
+#game-container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+#game-container ul {
+    /* list-style: none; */
+    
+    margin: 0;
+    padding: 0;
+}
+#game-container li {
+    margin: 10px 0;
+    /* font-size: 16px; */
+}
+#question{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+/* #game-container .option {
+    cursor: pointer;
+}
+#game-container .option:hover {
+    background-color: #f2f2f2;
+    
+}
+#game-container .option i {
+    margin-left: 5px;
+}
+#game-container #feedback {
+    margin-top: 10px;
+    font-weight: bold;
+} */
+
+/* Results container */
+#results-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#results-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+#results-container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}

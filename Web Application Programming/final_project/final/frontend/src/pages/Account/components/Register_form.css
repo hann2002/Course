@@ -1,0 +1,22 @@
+.Form_profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 380px;
+  width: 50%;
+  background-color: antiquewhite;
+}
+
+
+.Form_profile h3{
+  margin: 10px;
+}
+
+.Form_profile button  { 
+  width: 30%;
+  margin-left: 0%;
+}
+.donation_team{
+  margin-left: 25%;
+  width: 50%;
+}

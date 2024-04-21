@@ -1,0 +1,20 @@
+*{
+    font-family: sans-serif;
+}
+
+.header-container{
+    position: relative;
+    height:8vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    background-color: rgb(239, 241, 231);
+}
+
+/* gray, 80% */
+hr {
+    border-top:  solid gray; 
+    width: 80%;
+  }

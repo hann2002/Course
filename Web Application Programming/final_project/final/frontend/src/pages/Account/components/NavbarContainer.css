@@ -1,0 +1,39 @@
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    height: 50%;
+    width: 100%;
+    margin-top: 1em;
+    /* margin-bottom: 0.7em; */
+    font-size: 24px;
+  }
+  
+  .navbar.active {
+    font-weight: 600;
+    color: #366476;
+    transition: all 0.2s;
+  }
+  
+  .navbar.active:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transform: translateY(-2px);
+  }
+  
+  .navbar {
+    opacity: 0.8;
+    transition: all 0.2s;
+    color:black;
+    
+  }
+  
+  .navbar:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transform: translateY(-2px);
+  }
+
+  
+  

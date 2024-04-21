@@ -1,0 +1,72 @@
+
+
+.sponsor-box {
+    width: 90%;
+    display: flex;
+    height: 120px;
+    background-color: white;
+    align-items: center;
+    margin: 10px auto;
+   
+  }
+.sponsor-box:hover {
+    cursor: pointer;
+    border: 1px solid red; /* 鼠标悬停时，显示红色边框 */
+  }
+  
+.sponsor-box-left {
+    flex: 7;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin: 10px; 
+  }
+
+.sponsor-box-left h1 {
+    margin-left: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+    
+  }
+.sponsor-box-right {
+    height: 80%;
+    flex: 3;
+    position: relative;
+    border-left: 1px solid black;
+    font-size: 10px;
+  }
+  
+.sponsor-box-right h2 {
+    margin-left: 10%;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: red;
+    margin-bottom: -10px;
+  }
+.sponsor-box-right h3 {
+    margin-left: 10%;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: red;
+  }
+
+.sponsor-box.selected {
+    border: 2px solid red;
+}
+
+
+.box_left::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0;
+    bottom: 25%;
+    height: 120%;
+    width: 1px;
+    background-color: #ccc;
+  }
+
+

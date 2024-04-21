@@ -1,0 +1,243 @@
+.about-us{
+    background-color: #CDE6C7;
+    width:100%;
+    height: 460px;
+    display:flex;
+    flex-direction: row;
+}
+
+.who{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    padding-top: 0.7em;
+    padding-bottom: 2em;
+}
+
+#who-title{
+    opacity: 0;
+    color: #17390b;
+    font-weight: bold;
+    font-size: 3em;
+    animation: hide-and-show-first 5s linear  infinite forwards;
+}
+
+#who-content{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: hide-and-show-second 5s linear  infinite forwards;
+}
+
+#who-content > p{
+    color: #1f4c0f;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.purpose{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.7em;
+    padding-bottom: 2em;
+}
+
+#purpose-title{
+    opacity: 0;
+    color: #17390b;
+    font-weight: bold;
+    font-size: 3em;
+    animation: hide-and-show-third 5s linear  infinite forwards;
+}
+
+#purpose-content{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: hide-and-show-fourth 5s linear  infinite forwards;
+}
+
+#purpose-content > p{
+    color: #1f4c0f;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.about-us:hover #who-title{
+    opacity:1;
+}
+.about-us:hover #who-content{
+    opacity:1;
+}
+.about-us:hover #purpose-title{
+    opacity:1;
+}
+.about-us:hover #purpose-content{
+    opacity:1;
+}
+
+@keyframes hide-and-show-first{
+    0%{
+        opacity:0;
+    }
+    20%{
+        opacity:0;
+    }
+    40%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes hide-and-show-second{
+    0%{
+        opacity:0;
+    }
+    40%{
+        opacity:0;
+    }
+    60%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes hide-and-show-third{
+    0%{
+        opacity:0;
+    }
+    60%{
+        opacity:0;
+    }
+    80%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes hide-and-show-fourth{
+    0%{
+        opacity:0;
+    }
+    80%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.footer{
+    margin-top: 40px;
+    width:100%;
+    height: 400px;
+    background-color: #4c6c83;
+    position:relative;
+}
+.top-footer{
+    position:relative;
+    width: 100%;
+    height: 70%;
+    border-bottom-color: #80a0b6;
+    border-bottom-style:solid;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bot-footer{
+    position:relative;
+    width: 100%;
+    height: 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color:white;
+    font-weight:500;
+    font-family: Helvetica;
+}
+.icons{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    padding-bottom: 1.5em;
+}
+.fa{
+    color:white;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+.fa:hover{
+    cursor:pointer;
+    color:#afc3d1;
+    transform: scale(1.2);
+}
+
+.main-content{
+    position: relative;
+    overflow: scroll;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2em;
+}
+
+
+
+.paragraphs{
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    width:100%;
+
+}
+
+.paragraph:nth-of-type(even){
+    width:95%;
+    height:500px;
+    border-radius: 15px;
+    transition: transform 1.5s cubic-bezier(0.5, 0, 0.55, 0.97);
+}
+
+.paragraph:nth-of-type(odd){
+    width:95%;
+    height:500px;
+    border-radius: 15px;
+    transition: transform 1.5s cubic-bezier(0.5, 0, 0.55, 0.97);
+}
+
+.paragraph.active{
+    transform: translateX(0);
+}
+
+.paragraph:hover{
+    cursor: pointer;
+    height:510px;
+    width:96%;
+    opacity: 0.6;
+}
+
+

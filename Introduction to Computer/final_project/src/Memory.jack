@@ -1,0 +1,129 @@
+class Memory {
+    static Array memory, free, no;
+    static int lenindex, nextindex, sizeindex;
+    
+  /** Initializes the class. */
+  function void init() {
+        let memory = 0;
+        let free = 2048;
+        let no = 16384;
+        let lenindex = 0;
+        let nextindex = 1;
+        let sizeindex = -1;
+        let free[lenindex] = 16384-2048;
+        let free[nextindex] = null;
+        return;
+  }
+
+  /** Returns the RAM value at the given address. */
+  function int peek(int address) {
+        return memory[address];
+  }
+
+  /** Sets the RAM value at the given address to the given value. */
+  function void poke(int address, int value) {
+        let memory[address] = value;
+        return;
+  }
+
+  /** Finds an available RAM block of the given size and returns
+   *  a reference to its base address. */
+  function int alloc(int size) {
+        var Array pre, found;
+        let pre = Memory.prebest(size);
+        if(pre = no) {
+            let found = null;
+        }
+        else {
+            if(pre = null) {
+                let found = free; 
+                let free = Memory.adj(found, size); 
+            }
+            else {
+                let found = pre[nextindex];
+                let pre[nextindex] = Memory.adj(found, size);
+            }
+        }
+        return found+1;
+    }
+    function Array prebest(int size) {
+        var Array best, pre, now;
+        var int bestsize, nowsize;
+        let best = no;
+        let bestsize = 16384 - 2048;
+        let now = free;
+        let pre = null;
+        while(~(now = null)) {
+            let nowsize = now[lenindex]-1; 
+            if(~(nowsize < size) & (nowsize < bestsize)) {
+                let best = pre;
+                let bestsize = nowsize;
+            }
+            let pre = now;
+            let now = now[nextindex];
+        }
+        return best;
+    }
+    function Array adj(Array found, int size) {
+        var Array next;
+        var int realsize;
+        if(found[lenindex] > (size+1+2) ) { 
+            let next = found + size+1;
+            let next[nextindex] = found[nextindex];
+            let next[lenindex] = found[lenindex] - (next - found);
+            let found = found + 1;
+            let found[sizeindex] = size+1; 
+        }
+        else {  
+            let next = found[nextindex];
+            let realsize = found[lenindex];
+            let found = found + 1;
+            let found[sizeindex] = realsize;
+        }
+        return next;
+    }
+  /** De-allocates the given object (cast as an array) by making
+   *  it available for future allocations. */
+  function void deAlloc(Array o) {
+        var int osize;
+        var Array pre, next;
+        let osize = o[sizeindex];
+        let o = o - 1;
+        let pre = Memory.findpre(o);
+        
+        if(pre = null) {
+            let o[lenindex] = osize;
+            let o[nextindex] = free;
+            let free = o;
+            let pre = o;
+        }
+        else {
+            if((pre + pre[lenindex]) = o) {
+                let pre[lenindex] = pre[lenindex] + osize;
+            }
+            else {
+                let o[lenindex] = osize;
+                let o[nextindex] = pre[nextindex];
+                let pre[nextindex] = o;
+                let pre = o;
+            }
+        }
+        if((pre + pre[lenindex]) = pre[nextindex] ) {
+            let next = pre[nextindex];
+            let pre[lenindex] = pre[lenindex] + next[lenindex];
+            let pre[nextindex] = next[nextindex];
+        }
+        return;
+    }  
+    function Array findpre(Array o) {
+        var Array found;
+        if(free > o) {
+            return null;
+        }
+        let found = free;
+        while(~(found[nextindex] = null) & (found[nextindex] < o)) {
+            let found = found[nextindex];
+        }
+        return found;
+    }
+}
